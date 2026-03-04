@@ -1,9 +1,18 @@
 import pandas as pd
-from pandas import read_csv
 
 df = pd.read_csv('/Users/mka/Desktop/personal projects/Youtube/YT_Stats/Feb26/Table data.csv')
-
-print(df.head())
 df = df.dropna()
-df.duplicated().sum()
+
+print("initial data")
 print(df)
+print("head of data")
+print(df.head())
+print("info of data")
+print(df.shape)
+print(df.columns)
+print(df.info)
+print(df.describe())
+
+print("data sorted by views")
+print(df.sort_values("Views", ascending=False).head(10))
+
